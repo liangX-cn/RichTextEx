@@ -18,6 +18,7 @@
 	addChild(txt)
 	
 基本选项是
+
 	<#F00> = <#FF0000> 	= 文字颜色
 	<32>				= 字体大小
 	<img filename>		= 图片（filename 可以是已经在 SpriteFrameCache 里的 key，或磁盘文件）
@@ -27,12 +28,15 @@
 	\n \t 				= 换行 和 tab，可能暂时实现得不是很好
 	
 示例选项是 (在 RichTextEx.defaultCb 中提供)
-	<blink 文字>			= （动画）闪烁那些文字
+
+	<blink 文字>		= （动画）闪烁那些文字
 	<rotate 文字>		= （动画）旋转那些文字
-	<scale 文字>			= （动画）缩放那些文字
+	<scale 文字>		= （动画）缩放那些文字
+	
 	(但如果你做了 setText(t, callback) 除非你在 callback 主动调用 defaultCb，否则以上选项会被忽略)	
 	
 TODO 或自己自行可扩展
+
 	<img_w*h http://path/image> 从网络下载图片
 	...
 	
