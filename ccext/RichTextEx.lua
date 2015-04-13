@@ -25,9 +25,9 @@ Copyleft 20150410 随便使用
 	\n \t 				= 换行 和 tab，可能暂时实现得不是很好
 	
 示例选项是 (在 RichTextEx.defaultCb 中提供)
-	<blink 文字>			= （动画）闪烁那些文字
+	<blink 文字>		= （动画）闪烁那些文字
 	<rotate 文字>		= （动画）旋转那些文字
-	<scale 文字>			= （动画）缩放那些文字
+	<scale 文字>		= （动画）缩放那些文字
 	(但如果你做了 setText(t, callback) 除非你在 callback 主动调用 defaultCb，否则以上选项会被忽略)	
 	
 TODO 或自己自行可扩展
@@ -308,7 +308,7 @@ function _M:setText(text, callback)
 		i = i + 1
 	end
 
-	if (not b) and (p < len) then
+	if (not b) and (p <= len) then
 		str = str_sub(text, p)
 		obj = ccui.RichElementText:create(0, self._textColor, 255, str_fix(str), "", self._fontSize)
 		self:pushBackElement(obj)
